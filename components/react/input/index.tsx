@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import useEvent from "../common/use-event";
 import "@crossui/web-components/input/index.js";
 
