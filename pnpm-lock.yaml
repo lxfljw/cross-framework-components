@@ -56,6 +56,9 @@ importers:
 
   apps/Vue3:
     dependencies:
+      components-vue3:
+        specifier: workspace:components-vue3@*
+        version: link:../../components/vue3
       vue:
         specifier: ^3.4.21
         version: 3.4.29(typescript@5.4.5)
@@ -89,7 +92,15 @@ importers:
         specifier: ^18.2.66
         version: 18.3.3
 
-  components/vue3: {}
+  components/vue3:
+    dependencies:
+      vue:
+        specifier: ^3.4.21
+        version: 3.4.29(typescript@5.4.5)
+    devDependencies:
+      web-comp:
+        specifier: workspace:web-comp@*
+        version: link:../web-comp
 
   components/web-comp: {}
 

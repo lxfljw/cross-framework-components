@@ -49,7 +49,7 @@ import Input from "components-react/input";
 
 export default function App() {
   const handleChange = (e) => {
-    console.log(e.detail);
+    console.log("input" ,e.detail);
   };
   return (
     <div className="App">
@@ -61,6 +61,23 @@ export default function App() {
 
 ### Vue3 项目使用跨框架组件
 
-TODO:待补充
+```vue
+
+<script setup lang="ts">
+import Input from "components-vue3/input/index.vue";
+
+function change(e) {
+  console.log("input", e.detail);
+}
+</script>
+
+<template>
+  <!-- <c-button @click="cbtn" type="danger">
+    <div>我是Vue3</div>
+  </c-button> -->
+  <Input @change="change" value="123" />
+</template>
+
+```
 
 
