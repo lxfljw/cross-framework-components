@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "vue": "^3.4.21",
-    "web-comp": "workspace:web-comp@*",
-    "components-vue3": "workspace:components-vue3@*"
+    "@crossui/web-components": "workspace:*",
+    "@crossui/vue3": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",

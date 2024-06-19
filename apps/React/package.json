@@ -12,8 +12,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "web-comp": "workspace:web-comp@*",
-    "components-react": "workspace:components-react@*"
+    "@crossui/web-components": "workspace:*",
+    "@crossui/react": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

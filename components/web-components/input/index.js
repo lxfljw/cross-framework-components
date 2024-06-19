@@ -8,7 +8,7 @@ template.innerHTML = `
       height: 40px;
     }
   </style>
-  <input id="c-input" type="text">
+  <input id="c-input" placeholder="请输入内容" type="text">
 `;
 
 class CInput extends HTMLElement {

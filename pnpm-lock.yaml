@@ -10,18 +10,18 @@ importers:
 
   apps/React:
     dependencies:
-      components-react:
-        specifier: workspace:components-react@*
+      '@crossui/react':
+        specifier: workspace:*
         version: link:../../components/react
+      '@crossui/web-components':
+        specifier: workspace:*
+        version: link:../../components/web-components
       react:
         specifier: ^18.2.0
         version: 18.3.1
       react-dom:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
-      web-comp:
-        specifier: workspace:web-comp@*
-        version: link:../../components/web-comp
     devDependencies:
       '@types/react':
         specifier: ^18.2.66
@@ -56,15 +56,15 @@ importers:
 
   apps/Vue3:
     dependencies:
-      components-vue3:
-        specifier: workspace:components-vue3@*
+      '@crossui/vue3':
+        specifier: workspace:*
         version: link:../../components/vue3
+      '@crossui/web-components':
+        specifier: workspace:*
+        version: link:../../components/web-components
       vue:
         specifier: ^3.4.21
         version: 3.4.29(typescript@5.4.5)
-      web-comp:
-        specifier: workspace:web-comp@*
-        version: link:../../components/web-comp
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
@@ -81,12 +81,12 @@ importers:
 
   components/react:
     dependencies:
+      '@crossui/web-components':
+        specifier: workspace:*
+        version: link:../web-components
       react:
         specifier: ^18.2.0
         version: 18.3.1
-      web-comp:
-        specifier: workspace:web-comp@*
-        version: link:../web-comp
     devDependencies:
       '@types/react':
         specifier: ^18.2.66
@@ -98,11 +98,11 @@ importers:
         specifier: ^3.4.21
         version: 3.4.29(typescript@5.4.5)
     devDependencies:
-      web-comp:
-        specifier: workspace:web-comp@*
-        version: link:../web-comp
+      '@crossui/web-components':
+        specifier: workspace:*
+        version: link:../web-components
 
-  components/web-comp: {}
+  components/web-components: {}
 
 packages:
 

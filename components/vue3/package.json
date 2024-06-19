@@ -1,5 +1,5 @@
 {
-  "name": "components-vue3",
+  "name": "@crossui/vue3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,6 +13,6 @@
     "vue": "^3.4.21"
   },
   "devDependencies": {
-    "web-comp": "workspace:web-comp@*"
+    "@crossui/web-components": "workspace:*"
   }
 }

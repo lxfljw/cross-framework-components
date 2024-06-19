@@ -4,25 +4,24 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 // import "web-comp/button/index.js";
 // import "web-comp/input/index.js";
-import Input from "components-react/input";
+import Input from "@crossui/react/input";
 
 function App() {
   const [count, setCount] = useState(0);
-
+  const [inputValue, setInputValue] = useState("");
   const handleChange = (e) => {
-    console.log(e.detail);
+    setInputValue(e.detail);
   };
 
   return (
     <>
       <div>
-        {/* <span onClick={click}>
-          <c-button>
-            <div>我是</div>
-          </c-button>
-        </span> */}
-        {/* <c-input ref={inputRef} value="dssd"></c-input> */}
+        <label>web component 输入</label>
         <Input change={handleChange}></Input>
+        <div>
+          <label>显示：</label>
+          {inputValue}
+        </div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>

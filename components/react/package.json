@@ -1,5 +1,5 @@
 {
-  "name": "components-react",
+  "name": "@crossui/react",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "web-comp": "workspace:web-comp@*"
+    "@crossui/web-components": "workspace:*"
   },
   "peerDependencies": {
     "react": "^18.2.0"

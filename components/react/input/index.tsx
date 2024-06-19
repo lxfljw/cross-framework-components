@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import useEvent from "../common/use-event";
-import "web-comp/input/index.js";
+import "@crossui/web-components/input/index.js";
 
 export default function Input(props) {
   const inputRef = useRef();
@@ -10,11 +10,7 @@ export default function Input(props) {
       unListen();
     };
   }, []);
-  return (
-    <div>
-      <c-input ref={inputRef}></c-input>
-    </div>
-  );
+  return <c-input ref={inputRef}></c-input>;
 }
 
 declare global {

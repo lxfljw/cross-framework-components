@@ -48,12 +48,19 @@ import Input from "components-react/input";
 
 
 export default function App() {
-  const handleChange = (e) => {
-    console.log("input" ,e.detail);
+  const [inputValue, setInputValue] = useState("");
+
+   const handleChange = (e) => {
+    setInputValue(e.detail);
   };
   return (
     <div className="App">
-      <Input change={handleChange}></Input>
+     <label>web component 输入</label>
+        <Input change={handleChange}></Input>
+        <div>
+          <label>显示：</label>
+          {inputValue}
+        </div>
     </div>
   );
 }
