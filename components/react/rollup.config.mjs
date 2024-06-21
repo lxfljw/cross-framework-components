@@ -6,8 +6,9 @@ import { nodeResolve as resolve } from "@rollup/plugin-node-resolve";
 export default {
   input: "./index.ts",
   output: {
+    name: "ReactComponent",
     file: "./dist/index.js",
-    format: "es",
+    format: "umd",
     globals: {
       react: "React",
     },
@@ -16,7 +17,7 @@ export default {
   plugins: [
     typescript(),
     // resolve({
-    //   extensions: [".js", ".ts", ".tsx", ".jsx"],
+    //   extensions: [".js", ".ts"],
     // }),
     // sucrase({
     //   exclude: ["node_modules/**"],

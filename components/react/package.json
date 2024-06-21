@@ -1,16 +1,25 @@
 {
-  "name": "@crossui/react",
-  "version": "1.0.0",
+  "name": "crossui-react",
+  "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "dist/index.js",
   "scripts": {
     "build": "rollup --config"
   },
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "types": "dist/types//index.d.ts",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@crossui/web-components": "workspace:*"
+    "crossui-web-components": "workspace:*"
   },
   "peerDependencies": {
     "react": "^18.2.0"

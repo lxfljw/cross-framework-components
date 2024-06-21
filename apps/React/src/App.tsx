@@ -4,7 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 // import "web-comp/button/index.js";
 // import "web-comp/input/index.js";
-import Input from "@crossui/react/input";
+import { Input } from "crossui-react";
 
 function App() {
   const [count, setCount] = useState(0);

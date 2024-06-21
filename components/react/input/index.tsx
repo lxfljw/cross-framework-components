@@ -1,8 +1,12 @@
 import { useEffect, useRef } from "react";
 import useEvent from "../common/use-event";
-import "@crossui/web-components/input/index.js";
+import "crossui-web-components/input/index.js";
 
-export default function Input(props) {
+export type InputProps = {
+  change: (event: any) => void;
+};
+
+export default function Input(props: InputProps) {
   const inputRef = useRef();
   const unListen = useEvent(props, inputRef, ["change"]);
   useEffect(() => {
