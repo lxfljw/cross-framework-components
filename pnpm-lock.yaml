@@ -55,8 +55,8 @@ importers:
   apps/React:
     dependencies:
       crossui-react:
-        specifier: ^1.0.3
-        version: 1.0.3(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../components/react
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -1584,14 +1584,6 @@ packages:
   cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
-
-  crossui-react@1.0.3:
-    resolution: {integrity: sha512-TZ/Aa7r/VVG/neEbQpR6aNUhyweCfR0atchh4gWUbpu3j3WERG8Y4TWjYKGAT0G1RauAyBcFA0vDvTiycCfeyw==}
-    peerDependencies:
-      react: ^18.2.0
-
-  crossui-web-components@1.0.0:
-    resolution: {integrity: sha512-tGGLlAzkZJlcWpXesMd4Da/SXs+aTsSzC2NSiIpvtSWsZ133osIUlPQKfx0HZGAORZp7LyuMk5I8xLZfvmbjKQ==}
 
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
@@ -4080,13 +4072,6 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
-
-  crossui-react@1.0.3(react@18.3.1):
-    dependencies:
-      crossui-web-components: 1.0.0
-      react: 18.3.1
-
-  crossui-web-components@1.0.0: {}
 
   csstype@3.1.3: {}
 
