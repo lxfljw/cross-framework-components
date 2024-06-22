@@ -34,6 +34,9 @@ function App() {
 
 其中 React 使用的方式没有做事件绑定，需要使用 `addEventListener` 进行绑定，比较复杂，所以我们会基于 web-component 封装 React 组件，使得 React 项目可以直接使用，Vue3 同理 也需要做一层适配层更方便使用。
 
+## 项目调试
+
+
 
   
 

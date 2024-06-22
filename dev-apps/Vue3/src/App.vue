@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Input from "crossui/vue3/input/index.vue";
+import Input from "crossui-vue3/input/index.vue";
 import { ref } from "vue";
 // import "web-comp/button/index.js";
 // import "web-comp/input/index.js";

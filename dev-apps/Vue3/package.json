@@ -11,7 +11,7 @@
   "dependencies": {
     "vue": "^3.4.21",
     "crossui-web-components": "workspace:*",
-    "crossui/vue3": "workspace:*"
+    "crossui-vue3": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",

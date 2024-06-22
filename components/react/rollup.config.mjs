@@ -1,7 +1,5 @@
 import resolve from "@rollup/plugin-node-resolve";
-import swc from "@rollup/plugin-swc";
-import typescript from "@rollup/plugin-typescript";
-import { babel } from "@rollup/plugin-babel";
+import typescript from "rollup-plugin-typescript2";
 
 /** @type {import('rollup').RollupOptions} */
 export default {
@@ -9,7 +7,7 @@ export default {
   output: [
     {
       name: "ReactComponent",
-      file: "./dist/index.js",
+      file: "./lib/index.js",
       format: "umd",
       globals: {
         react: "React",
@@ -25,5 +23,10 @@ export default {
     },
   ],
   external: ["react", "react-dom", "react/jsx-runtime"],
-  plugins: [resolve(), babel({ extensions: [".ts", ".tsx", ".js", ".jsx"] })],
+  plugins: [
+    resolve({
+      extensions: [".js", ".jsx", ".ts", ".tsx"],
+    }),
+    typescript({ tsconfig: "./tsconfig.json" }),
+  ],
 };

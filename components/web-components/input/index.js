@@ -7,6 +7,7 @@
       border: 1px solid orange;
       width: 160px;
       height: 40px;
+      border-radius: 5px;
     }
   </style>
   <input id="c-input" placeholder="请输入内容" type="text">
