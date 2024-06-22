@@ -14,7 +14,9 @@ function App() {
   return (
     <>
       <div>
-        <h1>Input 组件</h1>
+        <h1>React 应用（18版本）</h1>
+
+        <h2>Input 组件</h2>
         <label>web component 输入</label>
         <Input change={handleChange}></Input>
         <div>

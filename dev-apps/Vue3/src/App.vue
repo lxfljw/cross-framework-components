@@ -12,8 +12,10 @@ function change(e) {
 
 <template>
   <!-- <c-button @click="cbtn" type="danger">
-    <div>我是Vue3</div>
   </c-button> -->
+  <h1>我是Vue3应用</h1>
+
+  <h2>Input 组件</h2>
   <label>输入</label>
   <Input @change="change" />
   <div>显示：{{ inputValue }}</div>
