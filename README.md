@@ -5,6 +5,37 @@
 跨框架组件是指该组件不受框架限制，可以在任意的前端框架中使用，比如 React、Angular、Vue 等。
 
 
+## 组件愿景
+最终目的是任何框架都可以随时接入相同的组件库，比如 React 和 Vue，可以使用相同的一份源代码，我们以 Input 组件为例：
+假设我们在框架内使用原生的 web-component
+- 在 Vue 里面
+
+```html
+<template>
+  <c-input v-model="value"></c-input>
+</template>
+```
+
+- 在 React 里面
+
+```jsx
+import React from "react";
+function App() {
+  return <c-input />
+}
+```
+
+想做到上面的使用方式只需要在项目安装 `crossui-web-components` 即可，然后在任意框架中使用 `<c-input>` 。
+
+至于如何在 Vue 和 React 中使用 web-component，我们可以看如下文档:
+
+- [Vue3 Web Components](https://cn.vuejs.org/guide/extras/web-components.html#vue-and-web-components)
+- [React Web Components](https://legacy.reactjs.org/docs/web-components.html)
+
+其中 React 使用的方式没有做事件绑定，需要使用 `addEventListener` 进行绑定，比较复杂，所以我们会基于 web-component 封装 React 组件，使得 React 项目可以直接使用，Vue3 同理 也需要做一层适配层更方便使用。
+
+
+  
 
 ## 实现原理
 
@@ -87,4 +118,31 @@ function change(e) {
 
 ```
 
+## TODO
+需要继续完善的地方：
+- 完善 angular 版本
+- 使用 scss or less
+- 组件库文档选型
+- 完善组件库的测试用例
+- 代码规范检查
 
+
+## 题外话
+
+参与这个组件库的开发，能学习到什么：
+- pnpm 多包管理， pnpm 包发布流程
+- 组件开发流程，构建工具，调试组建，文档规范
+- 如何设计一个组件库和内部组件
+- 学习 `web components` 技术，这是未来的趋势
+- 跨框架组件库，市面上还比较少，获取一些 star 有助于面试
+
+
+组件的设计原则前期可以参考成熟的组件库，比如 `ant design`、`element-ui`、`vant` 等，学习他们的设计理念，可以帮助我们更好的设计组件。
+
+
+## 参考资料
+
+1. [Web Components](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components)
+2. [阮一峰教程](https://www.ruanyifeng.com/blog/2019/08/web_components.html)
+3. [Vue3 Web Components](https://cn.vuejs.org/guide/extras/web-components.html#vue-and-web-components)
+4. [React Web Components](https://legacy.reactjs.org/docs/web-components.html)

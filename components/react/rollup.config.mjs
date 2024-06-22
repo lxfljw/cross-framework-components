@@ -1,27 +1,29 @@
+import resolve from "@rollup/plugin-node-resolve";
+import swc from "@rollup/plugin-swc";
 import typescript from "@rollup/plugin-typescript";
-import sucrase from "@rollup/plugin-sucrase";
-import { nodeResolve as resolve } from "@rollup/plugin-node-resolve";
+import { babel } from "@rollup/plugin-babel";
 
 /** @type {import('rollup').RollupOptions} */
 export default {
   input: "./index.ts",
-  output: {
-    name: "ReactComponent",
-    file: "./dist/index.js",
-    format: "umd",
-    globals: {
-      react: "React",
+  output: [
+    {
+      name: "ReactComponent",
+      file: "./dist/index.js",
+      format: "umd",
+      globals: {
+        react: "React",
+      },
     },
-  },
-  external: ["react", "react-dom"],
-  plugins: [
-    typescript(),
-    // resolve({
-    //   extensions: [".js", ".ts"],
-    // }),
-    // sucrase({
-    //   exclude: ["node_modules/**"],
-    //   transforms: ["typescript"],
-    // }),
+    {
+      name: "ReactComponent",
+      file: "./es/index.js",
+      format: "es",
+      globals: {
+        react: "React",
+      },
+    },
   ],
+  external: ["react", "react-dom", "react/jsx-runtime"],
+  plugins: [resolve(), babel({ extensions: [".ts", ".tsx", ".js", ".jsx"] })],
 };

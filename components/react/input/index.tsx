@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import useEvent from "../common/use-event";
+import useEvent from "../common/use-event.ts";
 import "crossui-web-components/input/index.js";
 
 export type InputProps = {
