@@ -37,6 +37,12 @@ function App() {
 ## 项目调试
 
 
+```bash
+# 调试 React
+pnpm dev:react
+# 调试 vue3
+pnpm dev:vue3
+```
 
   
 
@@ -61,7 +67,7 @@ Web Components 的核心是自定义元素，它是一种基于类的 JavaScript
 ```text
 ├── README.md
 ├── package.json
-├── apps
+├── dev-apps
     ├── React （ React 测试组件项目）
     ├── Vue （ Vue 测试组件项目）
 ├── components
